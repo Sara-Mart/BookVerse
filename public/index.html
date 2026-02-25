@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-btn">
+            <span>🍔</span>
+        </button>
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="brand">
+                <!-- Stack of books emoji/icon representation -->
+                <div class="brand-icon">📚</div>
+                <h1>BookVerse</h1>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">
+                    <!-- Simple CSS avatar -->
+                    <div class="avatar-img">👩🏽</div>
+                </div>
+                <p class="greeting">Hi Sara!<br>Welcome.</p>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <span class="icon">🏠</span> Home
+                </a>
+                <a href="#form-title" class="nav-item mobile-only">
+                    <span class="icon">➕</span> Add book
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">❤️</span> Favorites
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">✏️</span> Edit profile
+                </a>
+            </nav>
+
+            <div class="logout-container">
+                <a href="#" class="nav-item logout">
+                    Log out <span class="icon">🚪</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search book">
+                </div>
+                <div class="stats" style="display:none;"><span id="total-books">0</span></div>
+            </header>
+
+            <div class="books-grid" id="books-container">
+                <!-- Books will be injected here via JS -->
+            </div>
+
+            <!-- Empty state -->
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <div class="empty-icon">📂</div>
+                <h3>No books found</h3>
+                <p>Try adjusting your search or add a new book to the vault.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Form) -->
+        <aside class="sidebar-right">
+            <div class="form-container">
+                <h2 id="form-title" class="form-title">Add book</h2>
+                <form id="book-form">
+                    <input type="hidden" id="book-id">
+
+                    <div class="form-group">
+                        <input type="text" id="title" required placeholder="Title">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="author" required placeholder="Author">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" id="year" placeholder="Year of publication">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="genre" placeholder="Genre / Edition">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" step="0.1" min="0" max="10" id="rating" placeholder="Rating (e.g. 4.5)">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="description" rows="5" placeholder="Summary"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-add" id="submit-btn">Add</button>
+                        <button type="button" class="btn btn-cancel" id="cancel-btn"
+                            style="display: none;">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

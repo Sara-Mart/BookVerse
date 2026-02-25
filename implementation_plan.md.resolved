@@ -1,0 +1,80 @@
+📚 Plan de Implementación – Web App y API de Libros
+
+Vamos a construir una Web App sencilla junto con una API para la gestión de libros.
+La aplicación constará de un backend con una base de datos activa y una interfaz frontend dinámica para interactuar fácilmente con la API.
+
+🛠️ Pila Tecnológica Propuesta
+
+Backend / API: Node.js con Express.js ⚙️
+
+Base de Datos: SQLite 🗄️
+
+Perfecta para este proyecto: no requiere configuración manual y ofrece todas las ventajas de una base de datos relacional.
+
+Frontend: HTML / CSS / JavaScript puro 🎨
+
+Siguiendo buenas prácticas modernas de diseño web, usaremos CSS nativo para crear una interfaz atractiva, fluida e interactiva sin frameworks pesados.
+
+🚀 Funcionalidades
+
+📖 Listar libros: Ver todos los libros almacenados en la base de datos.
+
+🔍 Buscar libros: Filtrar libros fácilmente.
+
+➕ Añadir libro: Formulario para agregar nuevos libros.
+
+✏️ Actualizar libro: Seleccionar un libro existente y modificar sus datos.
+
+👀 Revisión del Usuario Requerida
+
+⚠️ IMPORTANTE
+Por favor, revisa la pila tecnológica propuesta (Node.js, Express, SQLite, HTML/CSS/JS).
+
+Si prefieres otra alternativa (por ejemplo: Python + FastAPI, MongoDB, React, etc.), ¡dímelo!
+De lo contrario, continuamos con este plan sin problemas 👍
+
+🔄 Cambios Propuestos
+📦 Proyecto Base
+🆕 package.json
+
+Inicializa el proyecto Node y define las dependencias necesarias (express, sqlite3, cors).
+
+🔙 Backend / API
+🆕 server.js
+
+Punto de entrada del servidor Express. Gestiona rutas como /api/books.
+
+🆕 database.js
+
+Inicializa la base de datos SQLite y expone funciones CRUD
+(Crear, Leer, Actualizar y Eliminar libros).
+
+🎨 Frontend / Interfaz de Usuario
+🆕 public/index.html
+
+Estructura principal HTML, con una cuadrícula para mostrar libros y un formulario moderno para añadir o editar.
+
+🆕 public/styles.css
+
+CSS personalizado para un diseño premium, con animaciones suaves y efectos hover ✨
+
+🆕 public/app.js
+
+JavaScript del lado del cliente para comunicarse con la API y actualizar el DOM de forma intuitiva.
+
+✅ Plan de Verificación
+🧪 Pruebas Locales
+
+Iniciar el servidor con npm start.
+
+Abrir el navegador en 👉 http://localhost:3000.
+
+Verificar los flujos de usuario:
+
+➕ Añadir un libro
+
+👁️ Verlo en la lista
+
+✏️ Modificarlo
+
+🔍 Buscarlo
